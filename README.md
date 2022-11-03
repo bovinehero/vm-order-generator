@@ -3,7 +3,7 @@
 
 ![Mockup image](docs/images/git-header.png)
 
-[Live Site](https://bovinehero.com/hunt-showdown/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
+[Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
 ## Table of Content
 
