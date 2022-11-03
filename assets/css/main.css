@@ -2,20 +2,27 @@
  * Main CSS for the site
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+/* Import all the things */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
- /* Reset all the things */
+/* Declare Global CSS vars */
+:root {
+    --main-bg-color: lightcoral;
+    --main-font-color: #333333;
+}
+
+/* Reset all the things */
 * {
     margin: 0;
     padding: 0;
     border: none;
     box-sizing: border-box;
-  }
+}
 
-  body {
+body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     min-height: 100vh;
-    color: #333333;
-    background: lightcoral;
-  }
+    color: var(--main-font-color);
+    background: var(--main-bg-color);
+}
