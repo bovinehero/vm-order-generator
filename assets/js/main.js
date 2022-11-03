@@ -1,3 +1,5 @@
 /**
- * Mian JavaScript for the site
+ * Main JavaScript for the site
  */
+
+console.log("JavaScript Connected!")
