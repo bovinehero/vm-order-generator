@@ -72,21 +72,19 @@ User experience Summary
 
 ### User Stories
 
-#### Persona 1
-1. Story Number 1
-2. Story Number 2
-3. Story Number 3
-4. Story Number 4
-5. Story Number 5
+#### Employee
+1. I would like to raise an order for a new VM
+2. I would like to specify the hardware of the VM
+3. I would like to request a backup type
+4. I would like to request an environment to deploy the VM to
+5. I would like to request a location to deploy the VM to
+6. I would like to specify the OS type that is installed
+7. I would like to find instructions on how to complete an order.
 
-#### Persona 2
-6. Story Number 6
-7. Story Number 7
-
-#### Site Owner 
-8. Story Number 8
-9. Story Number 9
-10. Story Number 10
+### Site Owner
+8. I want users to use an identifing email address for thier order
+9. I would like the data posted to the endpoint to be in json form 
+10. I would like the user to be able to download the request data in case of endpoint failure
 
 
 ## Design
@@ -138,43 +136,11 @@ Wireframes were created on desktop for a mobile first approach was initially con
 
 <br>
 <details>
-<summary>Index Page Wireframe </summary>
-<br>
-<img alt="wireframe image for index page" src="docs/images/wireframe-index.png">
-</details>
-<br>
-<details>
-<summary>Index Page Wireframe Tablet </summary>
-<br>
-<img alt="wireframe image for index page" src="docs/images/wireframe-index-tablet.png">
-</details>
-<br>
-<details>
 <summary>Index Page Wireframe Mobile </summary>
 <br>
 <img alt="wireframe image for index page" src="docs/images/wireframe-index-mobile.png">
 </details>
 <br>
-<details>
-<summary>Page 2 Wireframe</summary>
-<br>
-<img alt="wireframe image for store page" src="docs/images/wireframe-page2.png">
-</details>
-<br>
-<details>
-<summary>Page 2 Wireframe Tablet </summary>
-<br>
-<img alt="wireframe image for index page" src="docs/images/wireframe-page2-tablet.png">
-</details>
-<br>
-<details>
-<summary>Page 2 Wireframe Mobile </summary>
-<br>
-<img alt="wireframe image for index page" src="docs/images/wireframe-page2-mobile.png">
-</details>
-<br>
-
-
 
 ## Technologies Used
 
