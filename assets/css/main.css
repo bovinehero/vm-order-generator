@@ -9,7 +9,9 @@
 :root {
     --main-bg-color: lightcoral;
     --main-font-color: #333333;
+    --second-font-color: purple;
     --second-bg-color: white;
+    --modal-bg-color: rgba(0,0,0,0.6);
     --third-bg-color: cyan;
     --fourth-bg-color: violet;
 }
@@ -52,4 +54,47 @@ body {
     background: var(--fourth-bg-color);
 }
 
-/* align-content: flex-start */
+.request-footer {
+    background: var(--second-bg-color);
+}
+
+/* The Modal (background) */
+/* Hidden by default, once loaded it should stick in place on top of page - takes up entire screen and auto scrolls */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    /* Location of the box - change this with media query later */
+    padding-top: 20px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-bg-color); 
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: var(--main-bg-color);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid var(--main-font-color);
+    width: 80%;
+  }
+  
+  /* The Close Button in the Modal */
+  .closeRequest {
+    color: var(--main-font-color);
+    /* maybe flex box this once the items populate - float for now */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closeRequest:hover,
+  .closeRequest:focus {
+    color: var(--second-font-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
