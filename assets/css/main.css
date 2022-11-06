@@ -72,29 +72,27 @@ body {
     height: 100%;
     overflow: auto;
     background-color: var(--modal-bg-color); 
-  }
+}
   
-  /* Modal Content */
-  .modal-content {
+/* Modal Content */
+.modal-content {
     background-color: var(--main-bg-color);
     margin: auto;
     padding: 20px;
     border: 1px solid var(--main-font-color);
     width: 80%;
-  }
+}
   
   /* The Close Button in the Modal */
-  .closeRequest {
+.closeRequest {
     color: var(--main-font-color);
     /* maybe flex box this once the items populate - float for now */
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
-  .closeRequest:hover,
-  .closeRequest:focus {
+.closeRequest:hover, .closeRequest:focus {
     color: var(--second-font-color);
     text-decoration: none;
-    cursor: pointer;
-  }
+}
