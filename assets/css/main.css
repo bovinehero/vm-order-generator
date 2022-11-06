@@ -9,6 +9,9 @@
 :root {
     --main-bg-color: lightcoral;
     --main-font-color: #333333;
+    --second-bg-color: white;
+    --third-bg-color: cyan;
+    --fourth-bg-color: violet;
 }
 
 /* Reset all the things */
@@ -21,8 +24,32 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    position: relative;
-    min-height: 100vh;
     color: var(--main-font-color);
     background: var(--main-bg-color);
 }
+
+.request-window {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5%;
+    align-content: center;
+}
+
+.request-header {
+    background: var(--second-bg-color);
+}
+
+.request-header > h2 {
+    text-align: center;
+}
+
+.request-description-wrapper {
+    background: var(--third-bg-color);
+    padding: 5%;
+}
+
+.request-description {
+    background: var(--fourth-bg-color);
+}
+
+/* align-content: flex-start */

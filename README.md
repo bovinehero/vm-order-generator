@@ -1,4 +1,4 @@
-# Hunt Showdown
+# Project 2
 (Developer: Gary Grant)
 
 ![Mockup image](docs/images/git-header.png)
