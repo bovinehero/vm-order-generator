@@ -1,0 +1,15 @@
+{
+    "RequestParams": {
+        "title": "VM Options",
+        "CPUCount" : ["1","2","4"],
+        "MemorySize" : ["1","2","4","8","16","32","64"],
+        "DiskSize" : ["20","40","80","120","160","240","320","480","960"],
+        "OperatingSystem" : ["Windows", "Linux", "BSD"],
+        "Environment" : ["Production", "Staging", "Testing", "Development"],
+        "Location" : ["EMEA", "APAC", "NA"],
+		"meta": {
+            "author": "Bovine Hero",
+            "description": "Mock API response for VM Options"
+        }
+    }
+}

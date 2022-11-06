@@ -13,6 +13,10 @@ let btn = document.getElementById("vmRequest");
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("closeRequest")[0];
 
+// Get the base url for where all the API mocks are hosted
+let baseUrl = document.URL;
+
+
 /**
  * Loads the help text
  */
@@ -23,8 +27,15 @@ function loadHelp() {
 /**
  * Loads the order form modal
  */
-function launchModal() {
+function launchModal() { 
+    // location of the fake API for the form options
+    let url = `${baseUrl}/assets/mocks/sample.json`;
+    
     modal.style.display = "block";
+    // Mocked API Call to fetch the data from a web resourse
+    fetch(url)
+    .then(r => r.json())
+    .then(output => console.log('Data Returned!', output))
 }
 
 /**
@@ -116,3 +127,6 @@ window.onclick = function(event) {
     cancelOrder();
   }
 }
+
+// test mock fetch
+
