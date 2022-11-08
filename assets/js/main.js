@@ -72,6 +72,10 @@ function addOptions(optionList, selectId) {
   }
 }
 
+/**
+ * removes all options from a <select>
+ * @param {*} selectId 
+ */
 function removeAll(selectId) {
   let selectedId = document.getElementById(selectId);
   while (selectedId.options.length > 0) {
@@ -79,6 +83,10 @@ function removeAll(selectId) {
   }
 }
 
+/**
+ * For loop wrapper for removeAll - I'm lazy
+ * @param {} selectList 
+ */
 function cleanForm(selectList) {
   for (let i in selectList) {
     removeAll(selectList[i])
@@ -86,7 +94,7 @@ function cleanForm(selectList) {
 }
 
 /**
-* Clears the order form to allow the user to reset all inputs
+* Clears the order form via reload of the modal
 */
 function clearOrder() {
   launchModal();
