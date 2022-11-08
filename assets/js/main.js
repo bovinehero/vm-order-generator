@@ -16,7 +16,6 @@ let span = document.getElementsByClassName("closeRequest")[0];
 // Get the base url for where all the API mocks are hosted
 let baseUrl = document.URL;
 
-
 /**
  * Loads the help text
  */
@@ -127,6 +126,3 @@ window.onclick = function(event) {
     cancelOrder();
   }
 }
-
-// test mock fetch
-

@@ -38,54 +38,74 @@
             <!-- Modal Form Content -->
             <div class="modal-content">
                 <span class="closeRequest">&times;</span>
-                <h2>Request a New VM</h2>
-                <label for="email">Email Address:</label>
-                <input class="email-input" type="email" id="email" name="email_address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Must be a valid email format." placeholder=" Enter your email address..."> 
-                <label for="cpus">CPU Count</label>
-                <select id="cpus" name="cpus">
-                    <option value="small">small</option>
-                    <option value="medium">medium</option>
-                    <option value="large">large</option>
-                </select>
-                <label for="memory">Memory</label>
-                <select id="memory" name="memory">
-                    <option value="small">small</option>
-                    <option value="medium">medium</option>
-                    <option value="large">large</option>
-                </select>
-                <label for="disks">Disk Size</label>
-                <select id="disks" name="disks">
-                    <option value="small">small</option>
-                    <option value="medium">medium</option>
-                    <option value="large">large</option>
-                </select>     
-                <input type="checkbox" id="backup" name="backup" value="backup">
-                <label for="backup"> Backup Required</label><br>
-                <label for="oss">Operating System</label>
-                <select id="oss" name="oss">
-                    <option value="oss1">oss1</option>
-                    <option value="oss2">oss2</option>
-                    <option value="oss3">oss3</option>
-                </select>
-                <label for="envs">Environment</label>
-                <select id="envs" name="envs">
-                    <option value="env1">env1</option>
-                    <option value="env2">env2</option>
-                    <option value="env3">env3</option>
-                </select>
-                <label for="locations">Location</label>
-                <select id="locations" name="locations">
-                    <option value="location1">location1</option>
-                    <option value="location2">location2</option>
-                    <option value="location3">location3</option>
-                </select>
-                <!--Resize cols with media query-->
-                <textarea name="notes" rows="10" cols="27">Notes to include in the order</textarea>
-
-                <input type="button" onclick="alert('Download Placeholder!')" value="Download">
-                <input type="reset" onclick="alert('Clear Form Placeholder!')" value="Clear">
-                <input type="submit" onclick="alert('Submit Form Placeholder!')" value="Submit">
-        
+                <div>
+                    <h2>Request a New VM</h2>
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input class="email-input" type="email" id="email" name="email_address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Must be a valid email format." placeholder=" Enter your email address..."> 
+                </div>
+                <div>
+                    <label for="cpus">CPU Count</label>
+                    <select id="cpus" name="cpus">
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="memory">Memory</label>
+                    <select id="memory" name="memory">
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="disks">Disk Size</label>
+                    <select id="disks" name="disks">
+                        <option value="small">small</option>
+                        <option value="medium">medium</option>
+                        <option value="large">large</option>
+                    </select>     
+                </div>
+                <div>
+                    <label for="backup"> Backup Required</label> 
+                    <input type="checkbox" id="backup" name="backup" value="backup">
+                </div>
+                <div>
+                    <label for="oss">Operating System</label>
+                    <select id="oss" name="oss">
+                        <option value="oss1">oss1</option>
+                        <option value="oss2">oss2</option>
+                        <option value="oss3">oss3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="envs">Environment</label>
+                    <select id="envs" name="envs">
+                        <option value="env1">env1</option>
+                        <option value="env2">env2</option>
+                        <option value="env3">env3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="locations">Location</label>
+                    <select id="locations" name="locations">
+                        <option value="location1">location1</option>
+                        <option value="location2">location2</option>
+                        <option value="location3">location3</option>
+                    </select>
+                </div>
+                <div>
+                    <!--Resize cols with media query?-->
+                    <textarea name="notes" rows="10" cols="27">Notes to include in the order</textarea>
+                </div>
+                <div>
+                    <input type="button" onclick="alert('Download Placeholder!')" value="Download">
+                    <input type="reset" onclick="alert('Clear Form Placeholder!')" value="Clear">
+                    <input type="submit" onclick="alert('Submit Form Placeholder!')" value="Submit">
+                </div>
         </div>
     </section>
     <!-- END CONTENT HERE -->

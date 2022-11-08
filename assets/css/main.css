@@ -81,8 +81,24 @@ body {
     padding: 20px;
     border: 1px solid var(--main-font-color);
     width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
-  
+
+.modal-content > div {
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.modal-content > div > textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
   /* The Close Button in the Modal */
 .closeRequest {
     color: var(--main-font-color);
