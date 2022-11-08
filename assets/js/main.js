@@ -16,6 +16,8 @@ let span = document.getElementsByClassName("closeRequest")[0];
 // Get the base url for where all the API mocks are hosted
 let baseUrl = document.URL;
 
+let formSelectList = ['cpus', 'memory', 'disks', 'oss', 'envs', 'locations']
+
 /**
  * Loads the help text
  */
@@ -34,21 +36,24 @@ function launchModal() {
     // Mocked API Call to fetch the data from a web resourse
     fetch(url)
     .then(r => r.json())
-    .then(data => populateForm(data))
+    .then(data => populateForm(data, formSelectList))
 }
 
 /**
  * Function to complete the modal data from the remote call
  * @param {*} data 
  */
-function populateForm(data) {
-  console.log('Data Returned!', data['RequestParams'])
+function populateForm(data, selectList) {
+  // Clean form first to reset the options
+  cleanForm(selectList);
+  // Populate the form options
   addOptions(data['RequestParams']['CPUCount'], 'cpus')
   addOptions(data['RequestParams']['MemorySize'], 'memory')
   addOptions(data['RequestParams']['DiskSize'], 'disks')
   addOptions(data['RequestParams']['OperatingSystem'], 'oss')
   addOptions(data['RequestParams']['Environment'], 'envs')
   addOptions(data['RequestParams']['Location'], 'locations')
+
 }
 
 /**
@@ -60,10 +65,23 @@ function addOptions(optionList, selectId) {
   console.log(optionList, selectId)
   let selectedId = document.getElementById(selectId);
   for (let i in optionList) {
-    var opt = document.createElement('option');
+    let opt = document.createElement('option');
     opt.value = optionList[i];
     opt.innerHTML = optionList[i];
     selectedId.appendChild(opt);
+  }
+}
+
+function removeAll(selectId) {
+  let selectedId = document.getElementById(selectId);
+  while (selectedId.options.length > 0) {
+    selectedId.remove(0);
+  }
+}
+
+function cleanForm(selectList) {
+  for (let i in selectList) {
+    removeAll(selectList[i])
   }
 }
 
@@ -71,14 +89,14 @@ function addOptions(optionList, selectId) {
 * Clears the order form to allow the user to reset all inputs
 */
 function clearOrder() {
-
+  launchModal();
 }
 
 /**
 * Cancels order and return to the index page
 */
 function cancelOrder() {
-    modal.style.display = "none";
+  modal.style.display = "none";
 }
 
 /**
