@@ -34,49 +34,37 @@ function launchModal() {
     // Mocked API Call to fetch the data from a web resourse
     fetch(url)
     .then(r => r.json())
-    .then(output => console.log('Data Returned!', output))
+    .then(data => populateForm(data))
 }
 
 /**
-* Fetches the available configurations for the option: CPU
-*/
-function fetchCPUOptions() {
-
+ * Function to complete the modal data from the remote call
+ * @param {*} data 
+ */
+function populateForm(data) {
+  console.log('Data Returned!', data['RequestParams'])
+  addOptions(data['RequestParams']['CPUCount'], 'cpus')
+  addOptions(data['RequestParams']['MemorySize'], 'memory')
+  addOptions(data['RequestParams']['DiskSize'], 'disks')
+  addOptions(data['RequestParams']['OperatingSystem'], 'oss')
+  addOptions(data['RequestParams']['Environment'], 'envs')
+  addOptions(data['RequestParams']['Location'], 'locations')
 }
 
 /**
-* Fetches the available configurations for the option: Memory
-*/
-function fetchMemoryOptions() {
-
-}
-
-/**
-* Fetches the available configurations for the option: Disk
-*/
-function fetchDiskOptions() {
-
-}
-
-/**
-* Fetches the available configurations for the option: Operating Systems
-*/
-function fetchOSOptions() {
-
-}
-
-/**
-* Fetches the available configurations for the option: Environments
-*/
-function fetchEnvironmentOptions() {
-
-}
-
-/**
-* Fetches the available configurations for the option: Location
-*/
-function fetchLocationOptions() {
-
+ * Function to add <select> options given an id
+ * @param {*} optionList
+ * @param {*} selectId 
+ */
+function addOptions(optionList, selectId) {
+  console.log(optionList, selectId)
+  let selectedId = document.getElementById(selectId);
+  for (let i in optionList) {
+    var opt = document.createElement('option');
+    opt.value = optionList[i];
+    opt.innerHTML = optionList[i];
+    selectedId.appendChild(opt);
+  }
 }
 
 /**
