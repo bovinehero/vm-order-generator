@@ -132,7 +132,20 @@ function downloadOrder() {
   'Notes: ' + notes.value;
   // new constructor to create a text blob from the output
   console.log(output)
+  let outputToBLOB = new Blob([output], { type: 'text/plain' });
+  
+  // The file to save the data.
+  let filename = 'vmOrder.txt';	  
 
+  // create an anchor to vmOrder and assign download
+  let fileLink = document.createElement("a");
+  fileLink.download = filename;
+
+  fileLink.href = window.webkitURL.createObjectURL(outputToBLOB);
+
+
+    // call the download
+    fileLink.click(); 
 
 }
 
