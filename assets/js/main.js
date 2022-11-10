@@ -144,8 +144,8 @@ function downloadOrder() {
   fileLink.href = window.webkitURL.createObjectURL(outputToBLOB);
 
 
-    // call the download
-    fileLink.click(); 
+  // call the download
+  fileLink.click(); 
 
 }
 
