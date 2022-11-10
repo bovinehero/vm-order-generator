@@ -111,6 +111,28 @@ function cancelOrder() {
 * writes a file for download
 */
 function downloadOrder() {
+  // fetch all key pairs from the form
+  let name = "VM Request Order"
+  let cpu = document.getElementById("cpus")
+  let memory = document.getElementById("memory")
+  let disk = document.getElementById("disks")
+  let os = document.getElementById("oss")
+  let backup = document.getElementById("backup")
+  let env = document.getElementById("envs")
+  let location = document.getElementById("locations")
+  let notes = document.getElementById("notes")
+  // create the output string
+  let output = '\r Name: ' + name + ' \r\n ' + 
+  'CPU Count: ' +cpu.value + ' \r\n ' + 
+  'Memory: ' +memory.value + ' \r\n ' + 
+  'Disk Size: ' +disk.value + ' \r\n ' + 
+  'Operating System: ' +os.value + ' \r\n ' +
+  'Environment: ' + env.value + ' \r\n ' + 
+  'Location: ' + location.value + ' \r\n ' + 
+  'Notes: ' + notes.value;
+  // new constructor to create a text blob from the output
+  console.log(output)
+
 
 }
 

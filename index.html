@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <meta name="keywords" content="">
     <meta name="description" content="Project2 site as part of Code Institute work">
-    <title> Project 2 | Home</title>
+    <title>New Server Request</title>
 </head>
 <body>
     <header>
@@ -81,10 +81,10 @@
                 </div>
                 <div>
                     <!--Resize cols with media query?-->
-                    <textarea name="notes" rows="10" cols="27" value="notes">Notes to include in the order</textarea>
+                    <textarea id="notes" name="notes" rows="10" cols="27" value="notes">Notes to include in the order</textarea>
                 </div>
                 <div>
-                    <input type="button" onclick="alert('Download Placeholder!')" value="Download">
+                    <input type="button" onclick="downloadOrder()" value="Download">
                     <input type="reset" onclick="clearOrder()" value="Clear">
                     <input type="reset" onclick="cancelOrder()" value="Cancel">
                     <input type="submit" value="Submit">
