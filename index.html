@@ -36,7 +36,7 @@
         <div id="vmRequestModal" class="modal">
 
             <!-- Modal Form Content -->
-            <div class="modal-content">
+            <form class="modal-content" method="post" action="https://formdump.codeinstitute.net/">
                 <span class="closeRequest">&times;</span>
                 <div>
                     <h2>Request a New VM</h2>
@@ -47,48 +47,49 @@
                 </div>
                 <div>
                     <label for="cpus">CPU Count</label>
-                    <select id="cpus" name="cpus" multiple>
+                    <select id="cpus" name="cpus" value="cpu" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="memory">Memory</label>
-                    <select id="memory" name="memory" multiple>
+                    <select id="memory" name="memory" value="memory" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="disks">Disk Size</label>
-                    <select id="disks" name="disks" multiple>
+                    <select id="disks" name="disk" value="disk" required size="5">
                     </select>     
                 </div>
                 <div>
                     <label for="backup"> Backup Required</label> 
-                    <input type="checkbox" id="backup" name="backup" value="backup">
+                    <input type="checkbox" id="backup" name="backup" value="true">
                 </div>
                 <div>
                     <label for="oss">Operating System</label>
-                    <select id="oss" name="oss" multiple>
+                    <select id="oss" name="oss" value="os" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="envs">Environment</label>
-                    <select id="envs" name="envs" multiple>
+                    <select id="envs" name="envs" value="env" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="locations">Location</label>
-                    <select id="locations" name="locations" multiple>
+                    <select id="locations" name="locations" value="location" required size="5">
                     </select>
                 </div>
                 <div>
                     <!--Resize cols with media query?-->
-                    <textarea name="notes" rows="10" cols="27">Notes to include in the order</textarea>
+                    <textarea name="notes" rows="10" cols="27" value="notes">Notes to include in the order</textarea>
                 </div>
                 <div>
                     <input type="button" onclick="alert('Download Placeholder!')" value="Download">
                     <input type="reset" onclick="clearOrder()" value="Clear">
                     <input type="reset" onclick="cancelOrder()" value="Cancel">
-                    <input type="submit" onclick="alert('Submit Form Placeholder!')" value="Submit">
+                    <input type="submit" value="Submit">
                 </div>
+            </form>
         </div>
     </section>
     <!-- END CONTENT HERE -->

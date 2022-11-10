@@ -108,20 +108,6 @@ function cancelOrder() {
 }
 
 /**
-* Submits order and return to the index page
-*/
-function submitOrder() {
-
-}
-
-/**
-* Validates the order prioir to submit
-*/
-function validateOrder() {
-
-}
-
-/**
 * writes a file for download
 */
 function downloadOrder() {
