@@ -1,18 +1,13 @@
 /**
 * Main JavaScript for the site
 */
-
 console.log("JavaScript Connected!")
-
 // Get the modal
 let modal = document.getElementById("vmRequestModal");
-
 // Get the button that opens the modal
 let btn = document.getElementById("vmRequest");
-
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("closeRequest")[0];
-
 // Get the base url for where all the API mocks are hosted
 let baseUrl = document.URL;
 
@@ -30,8 +25,7 @@ function loadHelp() {
  */
 function launchModal() { 
     // location of the fake API for the form options
-    let url = `${baseUrl}/assets/mocks/sample.json`;
-    
+    let url = `${baseUrl}/assets/mocks/sample.json`;  
     modal.style.display = "block";
     // Mocked API Call to fetch the data from a web resourse
     fetch(url)
@@ -133,20 +127,14 @@ function downloadOrder() {
   // new constructor to create a text blob from the output
   console.log(output)
   let outputToBLOB = new Blob([output], { type: 'text/plain' });
-  
   // The file to save the data.
   let filename = 'vmOrder.txt';	  
-
   // create an anchor to vmOrder and assign download
   let fileLink = document.createElement("a");
   fileLink.download = filename;
-
   fileLink.href = window.webkitURL.createObjectURL(outputToBLOB);
-
-
   // call the download
   fileLink.click(); 
-
 }
 
 // When the user clicks on Request Button open the modal
