@@ -107,6 +107,7 @@ Try these:
 + https://coolors.co/f2efea-fc7753-66d7d1-403d58-dbd56e
 + https://coolors.co/0a2463-fb3640-605f5e-247ba0-e2e2e2
 + https://coolors.co/bac1b8-58a4b0-0c7c59-2b303a-d64933
++ https://coolors.co/ffba49-20a39e-ef5b5b-23001e-a4a9ad
 
 ### Fonts
 

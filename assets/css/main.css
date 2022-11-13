@@ -7,13 +7,19 @@
 
 /* Declare Global CSS vars */
 :root {
-    --main-bg-color: lightcoral;
-    --main-font-color: #333333;
-    --second-font-color: purple;
-    --second-bg-color: white;
+    --main-bg-color: #A4A9AD;
+    --main-font-color: #23001E;
+    /* action / alert color */
+    --second-font-color: #EF5B5B; 
+    --second-bg-color: #EF5B5B;
+    /* button color */
+    --third-font-color: #FFBA49; 
+    --third-bg-color: #FFBA49;
+    /* highlight color */
+    --fourth-font-color: #20A39E; 
+    --fourth-bg-color: #20A39E;
+
     --modal-bg-color: rgba(0,0,0,0.6);
-    --third-bg-color: cyan;
-    --fourth-bg-color: violet;
 }
 
 /* Reset all the things */
@@ -28,6 +34,31 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: var(--main-font-color);
     background: var(--main-bg-color);
+}
+
+label {
+    /* color: var(--main-font-color); */
+    text-transform: uppercase;
+}
+
+
+/* make it red instead (with with same width and style) */
+select:focus, select:active, select:hover, input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover {
+    outline-color: var(--third-font-color);
+}
+
+option {
+    text-transform: uppercase;
+}
+
+input[type='checkbox'] {
+    /* change the color of the checked box's background */
+    accent-color: var(--third-font-color);
+}
+/* make the selected option backround fit into the style */
+select option:checked {
+    /* need to use linear-gradient as single color still has a blue hover for some reason */
+    background: linear-gradient(var(--third-font-color),var(--third-font-color));
 }
 
 .request-window {
