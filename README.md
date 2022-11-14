@@ -5,6 +5,13 @@
 
 [Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
+
+TODO:
+
+1. Document Features withuser Story tie in to features with evidence
+2. feature Testing evidence
+
+
 ## Table of Content
 
 1. [Project Goals](#project-goals)
@@ -267,17 +274,17 @@ site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fb
 
 ### JavaScript Validation
 
-The JSHint was used to validate the CSS of the website.
+The JSHint was used to validate the JavaScript of the website.
 
-[results](#link-to-results) - No Error Found.
+![JSHint summary image for JavaScript Code page](docs/images/testing-jshint.png)
 
-Warnings displayed
+
+Warnings displayed:
 
 | **Level** | **Feature** | **Issue Description** | **Comment** |
 |-------------|-------------|----------------------|-------------|
-| Level | Feature | Description | Comment on Why it is still there |
+| Two unused variables | Modal Buttons | clearOrder & downloadOrder not used in script | These are both called on the HTML form in the modal - no issue |
 
-> More information about the discovered in the [Bugs](#bugs) section
 
 ### Accessibility
 
@@ -294,7 +301,7 @@ No Accessibility Errors on site
 
 1 Accessibility Alert discovered on site:
 
-+ A <noscript> element is present. Not an issue as the content within <noscript> is a simple paragraph styled the same way as the text below.
++ A `<noscript>` element is present. Not an issue as the content within `<noscript>` is a simple paragraph styled the same way as the text below.
 
 ### Performance
 
@@ -305,12 +312,7 @@ Performance testing was performed on lighthouse in Google Chrome's DevTools
 ![lighthouse summary image for index page](docs/images/lighthouse-index.png)
 
 
-Issues:
-
-| **Section** | **Feature** |**Issue Description** | **Comment** |
-|-------------|-------------|----------------------|-------------|
-| Section | Feature | Issue Description | Comment |
-| Section | Feature | Issue Description | Comment |
+No Issues Reported
 
 ### Device testing
 The website was tested on the following devices:
@@ -417,14 +419,14 @@ To clone this repository:
 ### Code Used
 
 [W3C Schools](https://www.w3schools.com/) for proof of concept attempts
-[css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for a primer on flexbox
-[mdm web docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) for various
+[css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for a review on flexbox
+[mdm web docs](https://developer.mozilla.org/en-US/docs/Learn) for various CSS, HTML and Javascript information.
 
 ### Content
-Credit any borrowed Content Here
+No borrowed Content in this project
 
 ### Media
-Credit any borrowed Media Here
+No borrowed Media in this project
 
 ## Acknowledgments
 I would like to acknowledge the following people who helped me along the way in completing my second CI project:
@@ -432,3 +434,5 @@ I would like to acknowledge the following people who helped me along the way in 
 Ed Bradly - for his insights into flexbox, grid and why mobile first will save you from headaches
 
 Mo Shami - for being the mentor that set me on the right path and provided me with mid and final feedback prioir to submission.
+
+Offensive Security - for the defensive JavaScript advice in the JS for loops.

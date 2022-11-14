@@ -14,13 +14,6 @@ let baseUrl = document.URL;
 let formSelectList = ['cpus', 'memory', 'disks', 'oss', 'envs', 'locations'];
 
 /**
- * Loads the help text
- */
-function loadHelp() {
-
-}
-
-/**
  * Loads the order form modal
  */
 function launchModal() { 
@@ -42,12 +35,12 @@ function populateForm(data, selectList) {
   // Clean form first to reset the options
   cleanForm(selectList);
   // Populate the form options
-  addOptions(data['RequestParams']['CPUCount'], 'cpus');
-  addOptions(data['RequestParams']['MemorySize'], 'memory');
-  addOptions(data['RequestParams']['DiskSize'], 'disks');
-  addOptions(data['RequestParams']['OperatingSystem'], 'oss');
-  addOptions(data['RequestParams']['Environment'], 'envs');
-  addOptions(data['RequestParams']['Location'], 'locations');
+  addOptions(data.RequestParams.CPUCount, 'cpus');
+  addOptions(data.RequestParams.MemorySize, 'memory');
+  addOptions(data.RequestParams.DiskSize, 'disks');
+  addOptions(data.RequestParams.OperatingSystem, 'oss');
+  addOptions(data.RequestParams.Environment, 'envs');
+  addOptions(data.RequestParams.Location, 'locations');
 
 }
 
@@ -60,10 +53,13 @@ function addOptions(optionList, selectId) {
   console.log(optionList, selectId);
   let selectedId = document.getElementById(selectId);
   for (let i in optionList) {
+    // use of hasOwnProperty check for defensive coding
+    if (optionList.hasOwnProperty(i)) {
     let opt = document.createElement('option');
     opt.value = optionList[i];
     opt.innerHTML = optionList[i];
     selectedId.appendChild(opt);
+    }
   }
 }
 
@@ -84,7 +80,10 @@ function removeAll(selectId) {
  */
 function cleanForm(selectList) {
   for (let i in selectList) {
+    // use of hasOwnProperty check for defensive coding
+    if (selectList.hasOwnProperty(i)) {
     removeAll(selectList[i]);
+    }
   }
 }
 
