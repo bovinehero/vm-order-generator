@@ -309,8 +309,6 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 
 + index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/vm-order-generator/index.html)
 
-+ page2.html [results](https://wave.webaim.org/report#/https://bovinehero.com/vm-order-generator/page2.html)
-
 
 #### Errors
 
