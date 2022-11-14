@@ -118,10 +118,11 @@ function downloadOrder() {
   let notes = document.getElementById("notes")
   // create the output string
   let output = '\r Name: ' + name + ' \r\n ' + 
-  'CPU Count: ' +cpu.value + ' \r\n ' + 
-  'Memory: ' +memory.value + ' \r\n ' + 
-  'Disk Size: ' +disk.value + ' \r\n ' + 
-  'Operating System: ' +os.value + ' \r\n ' +
+  'CPU Count: ' + cpu.value + ' \r\n ' + 
+  'Memory: ' + memory.value + ' \r\n ' + 
+  'Disk Size: ' + disk.value + ' \r\n ' + 
+  'Operating System: ' + os.value + ' \r\n ' +
+  'Backup Required: Confirm Backup type in Notes  \r\n ' +
   'Environment: ' + env.value + ' \r\n ' + 
   'Location: ' + location.value + ' \r\n ' + 
   'Notes: ' + notes.value;

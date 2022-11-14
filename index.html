@@ -50,17 +50,17 @@
                 </div>
                 <div>
                     <label for="cpus">CPU Count:</label>
-                    <select id="cpus" name="cpus" value="cpu" required size="5">
+                    <select id="cpus" name="cpus" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="memory">Memory:</label>
-                    <select id="memory" name="memory" value="memory" required size="5">
+                    <select id="memory" name="memory" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="disks">Disk Size:</label>
-                    <select id="disks" name="disk" value="disk" required size="5">
+                    <select id="disks" name="disk" required size="5">
                     </select>     
                 </div>
                 <div id="backup-div">
@@ -69,28 +69,28 @@
                 </div>
                 <div>
                     <label for="oss">Operating System:</label>
-                    <select id="oss" name="oss" value="os" required size="5">
+                    <select id="oss" name="oss" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="envs">Environment:</label>
-                    <select id="envs" name="envs" value="env" required size="5">
+                    <select id="envs" name="envs" required size="5">
                     </select>
                 </div>
                 <div>
                     <label for="locations">Location:</label>
-                    <select id="locations" name="locations" value="location" required size="5">
+                    <select id="locations" name="locations" required size="5">
                     </select>
                 </div>
                 <div>
                     <!--Resize cols with media query?-->
-                    <textarea id="notes" name="notes" value="notes">Notes to include in the order</textarea>
+                    <textarea id="notes" name="notes">Notes to include in the order</textarea>
                 </div>
                 <div id="order-buttons">
-                    <input id="order-submit" type="button" onclick="downloadOrder()" value="Download">
+                    <input type="button" onclick="downloadOrder()" value="Download">
                     <input type="reset" onclick="clearOrder()" value="Clear">
                     <input type="reset" onclick="cancelOrder()" value="Cancel">
-                    <input id="order-submit" type="submit" value="Submit">
+                    <input type="submit" value="Submit">
                 </div>
             </form>
         </div>

@@ -9,7 +9,6 @@
 :root {
     --main-color: #990011;
     --main-pair-color: #FCF6F5;
-    --main-invert: #66FFEE;
     --main-pair-invert: #03090A;
     --modal-bg-color: rgba(3,9,0,0.6);
 }
@@ -70,10 +69,6 @@ select option:checked, select option:hover {
     /* need to use linear-gradient as single color still has a blue hover for some reason */
     background: linear-gradient(var(--main-color),var(--main-color));
     color: var(--main-pair-color);
-}
-
-.order-submit{
-    float: right;
 }
 
 .request-window {

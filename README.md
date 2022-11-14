@@ -44,47 +44,49 @@
 
 ## Project Goals 
 
-### User Goals
-+ Goal 1
-+ Goal 2
+One of the big issues I face as an infrastructure engineer is the way in which people request new virtual machines, I never get all the details I need on the initial request. 
+This project endevours to build a requisition form that fetches the available configuration options from an endpoint to populate a form that a user can submit to a downstream request system.
 
-### Client Goals
-+ Goal 1
-+ Goal 2
+### User Goals
++ Should be able to order a new VM based on the offerings available
+
+### Sys Admin's Goals
++ Should recieve all the information needed to provision a new VM
 
 ## User Experience
 
 User experience Summary
 
 ### Key Information on the Site
-+ Point 1
-+ Point 2
++ On the landing site some basic instructions on how to use the form is present.
++ All the available configurations on the site load are availabel in the form. 
 
 ### Target Audience
-+ Point 1
-+ Point 2
++ Junior and Senior technical staff looking to order new virtual hardware for their projects
 
 ### User Requirements and Expectations
 
-+ Point 1
-+ Point 2
-+ Accessibility
++ A simple and intuitive navigation system
++ Quickly and easily find information
++ Links and functions that work as expected
++ Good presentation and a functional design that enables an order completion
++ Accessibility 
 
 ### User Stories
 
 #### Employee
 1. I would like to raise an order for a new VM
-2. I would like to specify the hardware of the VM
-3. I would like to request a backup type
-4. I would like to request an environment to deploy the VM to
-5. I would like to request a location to deploy the VM to
-6. I would like to specify the OS type that is installed
-7. I would like to find instructions on how to complete an order.
+2. I would like to find instructions on how to complete an order.
+3. When the standard form doesn't meet my requirments I would like to specify custom information in the request.
 
 ### Site Owner
-8. I want users to use an identifing email address for thier order
-9. I would like the data posted to the endpoint to be in json form 
-10. I would like the user to be able to download the request data in case of endpoint failure
+2. I would like users to always specify the hardware of the VM
+3. I would like to request a backup of the system when needed
+4. I would like users to always specify an environment to deploy the VM to
+5. I would like users to always specify a location to deploy the VM to
+6. I would like users to always specify the OS type that is installed
+8. I would like users to always specify an identifing email address for their order
+9. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
 
 
 ## Design
@@ -97,37 +99,29 @@ Design Considerations Summary
 
 ![image color pallette](docs/images/palette.png)
 
-Why the colours were chosen 
+The company I currently work for utilises a lot of red black and white in their primary colour scheme, and I wanted quite a striking screen on the load.
 
-The colour palette was created using the [Coolors](https://coolors.co/) website.
+I selected the pinkish red __Carmine__ (#990011) as a brilliant background color and then the complimentary shade of __Snow__ (#FCF6F5) for the primary colours to give homage to the themes on my employer's intranet site. As a contrast to __Snow__ i decided to use its opposite __Rich Black__ (#03090A) for areas that needed text on a white or snow background.
 
-Try these:
+> As Protanopia cannot distinguish Red from black, care was taken to ensure the the carmine was not placed on black anc vice versa
 
-+ https://coolors.co/dad6d6-92bfb1-f4ac45-694a38-a61c3c
-+ https://coolors.co/f2efea-fc7753-66d7d1-403d58-dbd56e
-+ https://coolors.co/0a2463-fb3640-605f5e-247ba0-e2e2e2
-+ https://coolors.co/bac1b8-58a4b0-0c7c59-2b303a-d64933
-+ https://coolors.co/ffba49-20a39e-ef5b5b-23001e-a4a9ad
+The colour [palette](https://coolors.co/990011-fcf6f5-03090a) was created using the Coolors [website](https://coolors.co/).
 
 ### Fonts
 
 Google Fonts was used for the following fonts:
 
-+ Font 1 plus description 
-+ Font 2 plus description 
++ __Open Sans__ for the entire body text on the site. It is a sans-serif font and was selected for its readibility as it designed for legibility across print, web, and mobile interfaces; paramount for the completion of a form.
 
 ### Imagery
 
-Where and why the images
+As the app is an order form, no images were used in this site to keep the workflow simple.
 
 ### Structure
 
-The page is structured in a well know, recognizable, user friendly, and easy to learn way. Upon arriving to the website the user sees a familiar type of navigation bar with the restaurant logo on the left side and the navigation links to the right. 
-The website consists of four separate pages: 
-+ A homepage with reviews, media, product description and a purchase the game call to action sections.
-+ A store page where potential players can buy yhe game and it's DLC.
-+ A image gallery with images showcasing the general feel of the game through concept art and gameplay screenshots.
-+ A signup page with a signup form, a map and information about how to contact the business.
+The website consists of a single page: 
+  + This allows the order form to be launched
+The page is structured in a well know, recognizable, user friendly, and easy to learn way. Upon arriving to the website the user sees an information box with instructions with a familiar type of button to launch the order form.
 
 Additionally there is a 404 page included that will return the website user to the home page.
 
@@ -139,9 +133,11 @@ Wireframes were created on desktop for a mobile first approach was initially con
 <details>
 <summary>Index Page Wireframe Mobile </summary>
 <br>
-<img alt="wireframe image for index page" src="docs/images/wireframe-index-mobile.png">
+<img alt="wireframe image for index page" src="docs/images/wireframe-index.png">
 </details>
 <br>
+
+The landing page is the same design for all screen sizes, but is allowed to expand down if the information volume in the text box requires it. on larger screen sizes the only variation is a column of buttons instead of a row for the form actions.
 
 ## Technologies Used
 
@@ -175,9 +171,7 @@ HTML, CSS and JavaScript were used to create this website.
 
 [Code Institute Development Template](https://github.com/Code-Institute-Org/gitpod-full-template) - for setting up the initial development environment
 
-[Tiny PNG](https://tinypng.com/) - compressing images.
-
-[ezgif](https://ezgif.com/) image conversion to webp
+[ezgif](https://ezgif.com/) image/media conversion to webp and gif for documentation
 
 [Coolors.co](https://coolors.co/) for colour pallette image
 
@@ -187,11 +181,9 @@ HTML, CSS and JavaScript were used to create this website.
 
 [Google DNS](https://developers.google.com/speed/public-dns) - hosting name resolution
 
-[Jira Cloud](https://www.atlassian.com/software/jira/free) - project management and task breakdown
-
 
 ## Features
-The website is comprised of five pages, four of which are accessible from the navigation menu (index/home page, store page, gallery page and the sign up (Join the Posse!) page). The fifth page is a 404 page which which will return the user to th ehome page should they click on an expired link within the site.
+The website is comprised of a single page app, a mock response of an upstream api and a custom 404 page which which will return the user to the home page should they click on an expired link or otherwise get lost on the site.
 
 + All Pages on the website have:
 
@@ -240,20 +232,6 @@ The website is comprised of five pages, four of which are accessible from the na
 
     + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
 
-+ page2.html 
-
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
-
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
-
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
-
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
-
 + 404.html
 
   + Leverages the github pages jekyll engine to provide a custom 404 experience for users and return users back to the site if they end up in a non-existent child domain.
@@ -264,18 +242,14 @@ The website is comprised of five pages, four of which are accessible from the na
 
 ### Future Implementations
 
-+ Future Implementation 1
-+ Future Implementation 2
-+ Future Implementation 3
++ Upstream Database system and API to make the available configurations call more real time.
++ Downstream API integration to place the order request into a work queue
 
 ### Accessibility Features
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
 
 + Using semantic HTML.
-+ Using descriptive alt attributes on images on the site.
-+ Providing information for screen readers where there are icons used and no text.
 + Ensuring that there is a sufficient colour contrast throughout the site.
-+ Ensuring menus are accessible by marking the current page as current for screen readers.
 
 ## Testing
 
