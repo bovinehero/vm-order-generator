@@ -16,7 +16,6 @@
             <a href="/"><h1>Server Requisitions</h1></a>
         </div>
     </header>
-    <noscript><p>Please enable JavaScript in your browser to use this website.</p></noscript>
     <!-- START CONTENT HERE -->
     <section class="request-window">
         <div class="request-header">
@@ -24,9 +23,10 @@
         </div>
         <div class="request-description-wrapper">
             <div class="request-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum lacus metus, faucibus rutrum tortor venenatis id. Quisque finibus congue ante ut mollis. Etiam non dolor mi. Donec tortor arcu, commodo ac euismod non, varius ac ante. Fusce at leo diam. Mauris luctus tincidunt mauris, et pellentesque orci condimentum et. Donec elementum dolor a diam tincidunt, at finibus eros consequat. Pellentesque quis molestie est, et porta arcu. In sagittis sodales sem, sit amet placerat ipsum elementum at. Maecenas mauris sem, facilisis in nisi sit amet, tincidunt facilisis metus. Aenean risus lorem, ultrices ut mattis ut, mattis ut diam.</p>
-
-                <p>Integer in libero quis enim porta scelerisque a ut nisl. Cras fermentum nibh velit, nec pulvinar turpis accumsan sit amet. Proin et quam eu tortor aliquam feugiat elementum et tortor. Nulla auctor est sit amet turpis lacinia, sed sollicitudin ex rhoncus. Curabitur nibh ante, dapibus vitae venenatis in, interdum eget turpis. Duis dictum tortor mi, quis elementum sapien pulvinar id. Nulla a nunc tincidunt, finibus eros et, mollis massa. Nullam scelerisque eget nunc vitae ultricies. Nam ultricies lacinia sapien, quis interdum nulla placerat et. Donec eleifend velit nisi, eu volutpat urna sodales eget. Ut eget metus lacus. Quisque consectetur commodo lacus, eu facilisis est consequat nec. Aliquam leo metus, malesuada at sodales nec, lacinia sed dui. Nam a arcu tincidunt turpis rhoncus porta in quis sem. Nunc aliquam, lacus sit amet fermentum rhoncus, lacus lectus aliquam quam, a rhoncus dolor sapien vitae dui. In sodales rhoncus eros et ultricies.</p>
+                <noscript><p>Please enable JavaScript in your browser to use this website.</p></noscript>
+                <h3>Instructions</h3><br>
+                <p>Select <b>Request</b> Button and complete all the fields in the form that pops up</p><br>
+                <p>Use the textarea to define any custom requirements, if the submit fails or you have any requirments not specified in the form please download the completed request and email the provisioning team.</p>     
             </div>
         </div>
         <div class="request-footer">
@@ -34,48 +34,50 @@
         </div>
         <!-- The Request Modal -->
         <div id="vmRequestModal" class="modal">
-
+            <br>
             <!-- Modal Form Content -->
             <form class="modal-content" method="post" action="https://formdump.codeinstitute.net/">
-                <span class="closeRequest">&times;</span>
+                <div>
+                    <span class="closeRequest">&times;</span>
+                </div>
                 <div>
                     <h2>Request a New VM</h2>
                 </div>
-                <div>
+                <div id="email-div">
                     <label for="email">Email Address:</label>
                     <input class="email-input" type="email" id="email" name="email_address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Must be a valid email format." placeholder=" Enter your email address..."> 
                 </div>
                 <div>
-                    <label for="cpus">CPU Count</label>
+                    <label for="cpus">CPU Count:</label>
                     <select id="cpus" name="cpus" value="cpu" required size="5">
                     </select>
                 </div>
                 <div>
-                    <label for="memory">Memory</label>
+                    <label for="memory">Memory:</label>
                     <select id="memory" name="memory" value="memory" required size="5">
                     </select>
                 </div>
                 <div>
-                    <label for="disks">Disk Size</label>
+                    <label for="disks">Disk Size:</label>
                     <select id="disks" name="disk" value="disk" required size="5">
                     </select>     
                 </div>
-                <div>
-                    <label for="backup"> Backup Required</label> 
+                <div id="backup-div">
+                    <label for="backup"> Backup Required:</label> 
                     <input type="checkbox" id="backup" name="backup" value="true">
                 </div>
                 <div>
-                    <label for="oss">Operating System</label>
+                    <label for="oss">Operating System:</label>
                     <select id="oss" name="oss" value="os" required size="5">
                     </select>
                 </div>
                 <div>
-                    <label for="envs">Environment</label>
+                    <label for="envs">Environment:</label>
                     <select id="envs" name="envs" value="env" required size="5">
                     </select>
                 </div>
                 <div>
-                    <label for="locations">Location</label>
+                    <label for="locations">Location:</label>
                     <select id="locations" name="locations" value="location" required size="5">
                     </select>
                 </div>
