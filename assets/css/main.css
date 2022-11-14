@@ -11,7 +11,7 @@
     --main-pair-color: #FCF6F5;
     --main-invert: #66FFEE;
     --main-pair-invert: #03090A;
-    --modal-bg-color: rgba(3,9,10,0.6);
+    --modal-bg-color: rgba(3,9,0,0.6);
 }
 
 /* Reset all the things */
@@ -32,6 +32,14 @@ label {
     text-transform: uppercase;
 }
 
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    color: var(--main-pair-color);
+    text-decoration: none;
+}
 
 /* make it red instead (with with same width and style) */
 select:focus, select:active, select:hover, input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover {
@@ -166,9 +174,7 @@ select option:checked, select option:hover {
 
   /* The Close Button in the Modal */
 .closeRequest {
-    color: var(--main-pair-color);
-    /* maybe flex box this once the items populate - float for now */
-    float: right;
+    color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
 }
