@@ -7,18 +7,10 @@
 
 /* Declare Global CSS vars */
 :root {
-    --main-bg-color: #A4A9AD;
-    --main-font-color: #23001E;
-    /* action / alert color */
-    --second-font-color: #EF5B5B; 
-    --second-bg-color: #EF5B5B;
-    /* button color */
-    --third-font-color: #FFBA49; 
-    --third-bg-color: #FFBA49;
-    /* highlight color */
-    --fourth-font-color: #20A39E; 
-    --fourth-bg-color: #20A39E;
-
+    --main-color: #990011;
+    --main-pair-color: #FCF6F5;
+    --main-invert: #66FFEE;
+    --main-pair-invert: #03090A;
     --modal-bg-color: rgba(0,0,0,0.6);
 }
 
@@ -32,19 +24,18 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: var(--main-font-color);
-    background: var(--main-bg-color);
+    color: var(--main-pair-invert);
+    background: var(--main-color);
 }
 
 label {
-    /* color: var(--main-font-color); */
     text-transform: uppercase;
 }
 
 
 /* make it red instead (with with same width and style) */
 select:focus, select:active, select:hover, input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover {
-    outline-color: var(--third-font-color);
+    outline-color: var(--main-color);
 }
 
 option {
@@ -53,12 +44,30 @@ option {
 
 input[type='checkbox'] {
     /* change the color of the checked box's background */
-    accent-color: var(--third-font-color);
+    accent-color: var(--main-color);
 }
+
+input[type=button], input[type=submit], input[type=reset]{
+    /* change the color of the checked box's background */
+    color: var(--main-pair-color);
+    background-color:var(--main-color);
+    border: none;
+    margin: 4px 2px;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
 /* make the selected option backround fit into the style */
-select option:checked {
+select option:checked, select option:hover {
     /* need to use linear-gradient as single color still has a blue hover for some reason */
-    background: linear-gradient(var(--third-font-color),var(--third-font-color));
+    background: linear-gradient(var(--main-color),var(--main-color));
+    color: var(--main-pair-color);
+}
+
+
+
+.order-submit{
+    float: right;
 }
 
 .request-window {
@@ -69,7 +78,7 @@ select option:checked {
 }
 
 .request-header {
-    background: var(--second-bg-color);
+    background: var(--main-pair-color);
 }
 
 .request-header > h2 {
@@ -77,16 +86,16 @@ select option:checked {
 }
 
 .request-description-wrapper {
-    background: var(--third-bg-color);
+    background: var(--main-pair-color);
     padding: 5%;
 }
 
 .request-description {
-    background: var(--fourth-bg-color);
+    background: var(--main-pair-color);
 }
 
 .request-footer {
-    background: var(--second-bg-color);
+    background: var(--main-pair-color);
 }
 
 /* The Modal (background) */
@@ -107,10 +116,11 @@ select option:checked {
   
 /* Modal Content */
 .modal-content {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-pair-color);
     margin: auto;
     padding: 20px;
-    border: 1px solid var(--main-font-color);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
     width: 80%;
     display: flex;
     flex-flow: column nowrap;
@@ -122,7 +132,6 @@ select option:checked {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    /* background-color: aqua; */
 }
 
 .modal-content > div > select {
@@ -138,9 +147,26 @@ select option:checked {
     margin-right: auto;
 }
 
+#order-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1px;
+    color: var(--main-pair-color);
+}
+
+#order-submit{
+    color: var(--main-pair-color);
+    background-color:var(--main-color);
+}
+
+#order-download{
+    color: var(--main-pair-color);
+    background-color:var(--main-color);
+}
+
   /* The Close Button in the Modal */
 .closeRequest {
-    color: var(--main-font-color);
+    color: var(--main-pair-color);
     /* maybe flex box this once the items populate - float for now */
     float: right;
     font-size: 28px;
@@ -148,6 +174,6 @@ select option:checked {
 }
   
 .closeRequest:hover, .closeRequest:focus {
-    color: var(--second-font-color);
+    color: var(--main-color);
     text-decoration: none;
 }
