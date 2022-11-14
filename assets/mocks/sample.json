@@ -4,9 +4,9 @@
         "CPUCount" : ["1","2","4","6","8"],
         "MemorySize" : ["1","2","4","8","16","32","64","128"],
         "DiskSize" : ["None", "20","40","80","120","160","240","320","480","960"],
-        "OperatingSystem" : ["Windows", "Linux", "BSD"],
-        "Environment" : ["Production", "Staging", "Testing", "Development"],
-        "Location" : ["EMEA", "APAC", "NA"],
+        "OperatingSystem" : ["Windows Server 2019", "Windows 11", "Linux: Debian", "Linux: Centos", "Linux: Kali", "BSD: MacOS", "BSD: Firewall"],
+        "Environment" : ["Production", "Staging", "Testing", "Development", "External"],
+        "Location" : ["US West (Oregon)", "US East (Ohio)", "South America (São Paulo)", "Europe (Ireland)", "Europe (London) Region", "Middle East (Bahrain) Region"],
 		"meta": {
             "author": "Bovine Hero",
             "description": "Mock API response for VM Options"

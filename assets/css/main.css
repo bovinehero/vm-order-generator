@@ -208,5 +208,6 @@ select option:checked, select option:hover {
     float: right;
     padding-right: 1rem;
     margin-left: auto;
+    margin-right: 10px;
     order: 2;
 }

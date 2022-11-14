@@ -26,6 +26,7 @@ function loadHelp() {
 function launchModal() { 
     // location of the fake API for the form options
     let url = `${baseUrl}/assets/mocks/sample.json`;  
+    console.log(url)
     modal.style.display = "block";
     // Mocked API Call to fetch the data from a web resourse
     fetch(url)
