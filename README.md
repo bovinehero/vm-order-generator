@@ -257,37 +257,13 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 The W3C Markup Validation Service was used to validate the HTML of the website. 
 
-index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fvm-order-generator%2Findex.html) - No Errors Found
-
-Warnings displayed
-
-| **Level** | **Feature** | **Issue Description** | **Comment** |
-|-------------|-------------|----------------------|-------------|
-| Level | Feature | Description | Comment on Why it is still there |
-
-
-The W3C Markup Validation Service was used to validate the HTML of the website. 
-
-page2.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fvm-order-generator%2Fpage2.html) - No Errors Found
-
-Warnings displayed
-
-| **Level** | **Feature** | **Issue Description** | **Comment** |
-|-------------|-------------|----------------------|-------------|
-| Level | Feature | Description | Comment on Why it is still there |
+index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fvm-order-generator%2Findex.html) - No Errors or Warnings Found
 
 ### CSS Validation
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
 
-site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fvm-order-generator%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Error Found.
-
-Warnings displayed
-
-| **Level** | **Feature** | **Issue Description** | **Comment** |
-|-------------|-------------|----------------------|-------------|
-| Level | Feature | Description | Comment on Why it is still there |
-
+site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fvm-order-generator%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Errors or Warnings Found
 
 ### JavaScript Validation
 
@@ -312,11 +288,13 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 
 #### Errors
 
-Accessibility Errors discussed here
+No Accessibility Errors on site
 
 #### Alerts
 
-Accessibility Alerts discussed here
+1 Accessibility Alert discovered on site:
+
++ A <noscript> element is present. Not an issue as the content within <noscript> is a simple paragraph styled the same way as the text below.
 
 ### Performance
 
@@ -333,18 +311,6 @@ Issues:
 |-------------|-------------|----------------------|-------------|
 | Section | Feature | Issue Description | Comment |
 | Section | Feature | Issue Description | Comment |
-
-#### page2.html
-
-![lighthouse summary image for page2](docs/images/lighthouse-page2.png)
-
-Issues:
-
-| **Section** | **Feature** |**Issue Description** | **Comment** |
-|-------------|-------------|----------------------|-------------|
-| Section | Feature | Issue Description | Comment |
-| Section | Feature | Issue Description | Comment |
-
 
 ### Device testing
 The website was tested on the following devices:

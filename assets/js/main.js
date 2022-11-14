@@ -1,7 +1,7 @@
 /**
 * Main JavaScript for the site
 */
-console.log("JavaScript Connected!")
+console.log("JavaScript Connected!");
 // Get the modal
 let modal = document.getElementById("vmRequestModal");
 // Get the button that opens the modal
@@ -11,7 +11,7 @@ let span = document.getElementsByClassName("closeRequest")[0];
 // Get the base url for where all the API mocks are hosted
 let baseUrl = document.URL;
 
-let formSelectList = ['cpus', 'memory', 'disks', 'oss', 'envs', 'locations']
+let formSelectList = ['cpus', 'memory', 'disks', 'oss', 'envs', 'locations'];
 
 /**
  * Loads the help text
@@ -26,12 +26,12 @@ function loadHelp() {
 function launchModal() { 
     // location of the fake API for the form options
     let url = `${baseUrl}/assets/mocks/sample.json`;  
-    console.log(url)
+    console.log(url);
     modal.style.display = "block";
     // Mocked API Call to fetch the data from a web resourse
     fetch(url)
     .then(r => r.json())
-    .then(data => populateForm(data, formSelectList))
+    .then(data => populateForm(data, formSelectList));
 }
 
 /**
@@ -42,12 +42,12 @@ function populateForm(data, selectList) {
   // Clean form first to reset the options
   cleanForm(selectList);
   // Populate the form options
-  addOptions(data['RequestParams']['CPUCount'], 'cpus')
-  addOptions(data['RequestParams']['MemorySize'], 'memory')
-  addOptions(data['RequestParams']['DiskSize'], 'disks')
-  addOptions(data['RequestParams']['OperatingSystem'], 'oss')
-  addOptions(data['RequestParams']['Environment'], 'envs')
-  addOptions(data['RequestParams']['Location'], 'locations')
+  addOptions(data['RequestParams']['CPUCount'], 'cpus');
+  addOptions(data['RequestParams']['MemorySize'], 'memory');
+  addOptions(data['RequestParams']['DiskSize'], 'disks');
+  addOptions(data['RequestParams']['OperatingSystem'], 'oss');
+  addOptions(data['RequestParams']['Environment'], 'envs');
+  addOptions(data['RequestParams']['Location'], 'locations');
 
 }
 
@@ -57,7 +57,7 @@ function populateForm(data, selectList) {
  * @param {*} selectId 
  */
 function addOptions(optionList, selectId) {
-  console.log(optionList, selectId)
+  console.log(optionList, selectId);
   let selectedId = document.getElementById(selectId);
   for (let i in optionList) {
     let opt = document.createElement('option');
@@ -84,7 +84,7 @@ function removeAll(selectId) {
  */
 function cleanForm(selectList) {
   for (let i in selectList) {
-    removeAll(selectList[i])
+    removeAll(selectList[i]);
   }
 }
 
@@ -107,15 +107,14 @@ function cancelOrder() {
 */
 function downloadOrder() {
   // fetch all key pairs from the form
-  let name = "VM Request Order"
-  let cpu = document.getElementById("cpus")
-  let memory = document.getElementById("memory")
-  let disk = document.getElementById("disks")
-  let os = document.getElementById("oss")
-  let backup = document.getElementById("backup")
-  let env = document.getElementById("envs")
-  let location = document.getElementById("locations")
-  let notes = document.getElementById("notes")
+  let name = "VM Request Order";
+  let cpu = document.getElementById("cpus");
+  let memory = document.getElementById("memory");
+  let disk = document.getElementById("disks");
+  let os = document.getElementById("oss");
+  let env = document.getElementById("envs");
+  let location = document.getElementById("locations");
+  let notes = document.getElementById("notes");
   // create the output string
   let output = '\r Name: ' + name + ' \r\n ' + 
   'CPU Count: ' + cpu.value + ' \r\n ' + 
@@ -127,7 +126,7 @@ function downloadOrder() {
   'Location: ' + location.value + ' \r\n ' + 
   'Notes: ' + notes.value;
   // new constructor to create a text blob from the output
-  console.log(output)
+  console.log(output);
   let outputToBLOB = new Blob([output], { type: 'text/plain' });
   // The file to save the data.
   let filename = 'vmOrder.txt';	  
@@ -150,4 +149,4 @@ window.onclick = function(event) {
   if (event.target == modal) {
     cancelOrder();
   }
-}
+};
