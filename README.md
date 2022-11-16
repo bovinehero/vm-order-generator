@@ -8,8 +8,8 @@
 
 TODO:
 
-1. Document Features withuser Story tie in to features with evidence
-2. feature Testing evidence
+1. Re-work the user stories into a smaller batch
+2. Review content
 
 
 ## Table of Content
@@ -192,21 +192,6 @@ HTML, CSS and JavaScript were used to create this website.
 ## Features
 The website is comprised of a single page app, a mock response of an upstream api and a custom 404 page which which will return the user to the home page should they click on an expired link or otherwise get lost on the site.
 
-#### Employee
-1. I would like to raise an order for a new VM
-2. I would like to find instructions on how to complete an order.
-3. When the standard form doesn't meet my requirements I would like to specify custom information in the request.
-
-### Site Owner
-4. I would like users to always specify the hardware of the VM
-5. I would like to request a backup of the system when needed
-6. I would like users to always specify an environment to deploy the VM to
-7. I would like users to always specify a location to deploy the VM to
-8. I would like users to always specify the OS type that is installed
-9. I would like users to always specify an identifing email address for their order
-10. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
-11. I would like users to be able to communicate custom requirments in an order
-
 + index.html
   
  + Instructions text box containing the following instructions: `Use the textarea to define any custom requirements, if the submit fails or you have any requirments not specified in the form please download the completed request and email the provisioning team.` informing the potential users how to to request a new virtual machine.
@@ -326,7 +311,86 @@ The website was tested on the following browsers:
 
 ### Testing user stories
 
-1. User Story Number 1
+
+Submit an Order with checkbox and backup
+Download an Order no backup
+Mandatory items check
+Clear check
+Cancel check
+
+
+
+
+1. I would like to raise an order for a new VM
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+<br>
+<details>
+<summary>Submit an Order with email validation check</summary>
+<br>
+<img alt="Test of Email Validation and Submit" src="docs/images/testing-submit-and-email-validation.gif">
+</details>
+<br>
+<details>
+<summary>Download an order</summary>
+<br>
+<img alt="Download a completed order" src="docs/images/testing-download-button.gif">
+Downloaded file <a href="docs/text/vmOrder.txt">sample</a>
+</details>
+<br>
+<details>
+<summary>Clear Order form</summary>
+<br>
+<img alt="Clear the order form selections" src="docs/images/testing-clear-button.gif">
+</details>
+<br>
+<details>
+<summary>Form validation check on VM values for a submit</summary>
+<br>
+<img alt="form validation of mandatory inputs" src="docs/images/testing-form-validation.gif">
+</details>
+<br>
+<details>
+<summary>Cancel Order via button, "X" and click outside modal </summary>
+<br>
+<img alt="Cancel the order form" src="docs/images/testing-cancel-order.gif">
+</details>
+<br>
+
+2. I would like to find instructions on how to complete an order.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+3. When the standard form doesn't meet my requirements I would like to specify custom information in the request.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -355,7 +419,211 @@ The website was tested on the following browsers:
 </details>
 <br>
 
-2. User Story Number 2
+4. I would like users to always specify the hardware of the VM
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+5. I would like to request a backup of the system when needed
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+6. I would like users to always specify an environment to deploy the VM to
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+7. I would like users to always specify a location to deploy the VM to
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+8. I would like users to always specify the OS type that is installed
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+9. I would like users to always specify an identifing email address for their order
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+10. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+| Feature name | steps to test | Expected results  | Works as expected |
+
+
+<br>
+<details>
+<summary>Feature 1</summary>
+<br>
+<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
+</details>
+<br>
+<details>
+<summary>Feature 2</summary>
+<br>
+<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
+</details>
+<br>
+<details>
+<summary>Feature 3</summary>
+<br>
+<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
+</details>
+<br>
+
+
+11. I would like users to be able to communicate custom requirments in an order
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
