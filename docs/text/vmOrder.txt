@@ -1,0 +1,9 @@
+ Name: VM Request Order 
+ CPU Count: 1 
+ Memory: 4 
+ Disk Size: 40 
+ Operating System: Windows Server 2019 
+ Backup Required: Confirm Backup type in Notes  
+ Environment: Production 
+ Location: South America (São Paulo) 
+ Notes: I am some notes again
