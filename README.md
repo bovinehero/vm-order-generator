@@ -1,4 +1,4 @@
-# Project 2
+# New Server Requisition Order
 (Developer: Gary Grant)
 
 ![Mockup image](docs/images/git-header.png)
@@ -9,6 +9,7 @@
 TODO:
 
 1. Re-work the user stories into a smaller batch
+2. complete story testing
 2. Review content
 
 
