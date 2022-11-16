@@ -87,13 +87,13 @@ User experience Summary
 3. When the standard form doesn't meet my requirments I would like to specify custom information in the request.
 
 ### Site Owner
-2. I would like users to always specify the hardware of the VM
-3. I would like to request a backup of the system when needed
-4. I would like users to always specify an environment to deploy the VM to
-5. I would like users to always specify a location to deploy the VM to
-6. I would like users to always specify the OS type that is installed
-8. I would like users to always specify an identifing email address for their order
-9. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
+4. I would like users to always specify the hardware of the VM
+5. I would like to request a backup of the system when needed
+6. I would like users to always specify an environment to deploy the VM to
+7. I would like users to always specify a location to deploy the VM to
+8. I would like users to always specify the OS type that is installed
+9. I would like users to always specify an identifing email address for their order
+10. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
 
 
 ## Design
@@ -192,52 +192,47 @@ HTML, CSS and JavaScript were used to create this website.
 ## Features
 The website is comprised of a single page app, a mock response of an upstream api and a custom 404 page which which will return the user to the home page should they click on an expired link or otherwise get lost on the site.
 
-+ All Pages on the website have:
+#### Employee
+1. I would like to raise an order for a new VM
+2. I would like to find instructions on how to complete an order.
+3. When the standard form doesn't meet my requirements I would like to specify custom information in the request.
 
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
-
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
-
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
-
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
-
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
-
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
-
+### Site Owner
+4. I would like users to always specify the hardware of the VM
+5. I would like to request a backup of the system when needed
+6. I would like users to always specify an environment to deploy the VM to
+7. I would like users to always specify a location to deploy the VM to
+8. I would like users to always specify the OS type that is installed
+9. I would like users to always specify an identifing email address for their order
+10. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
+11. I would like users to be able to communicate custom requirments in an order
 
 + index.html
   
- + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
+ + Instructions text box containing the following instructions: `Use the textarea to define any custom requirements, if the submit fails or you have any requirments not specified in the form please download the completed request and email the provisioning team.` informing the potential users how to to request a new virtual machine.
+    + User Stories Covered: 2
+    + Instructions Screenshot. <br> ![text instructions](docs/images/feature-instructions.png)
 
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
+  + A responsive order form that prompts users to fill out the required information for an order.
+    + User Stories Covered: 1
+      + Smaller Screen size modal Screenshot. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
+      + Larger Screen size modal Screenshot. <br> ![larger screen modal view](docs/images/feature-order-form.png)
 
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
+  + A mocked API call page that populates the form with the current available options when opened or cleared at an [endpoint](https://bovinehero.com/vm-order-generator//assets/mocks/sample.json) /assets/mocks/sample.json and a Checkbox option for Backups. - As this is a mocked call on the website the data is cached thus a full refresh of the endpoint page is required if it changes.
+    + User Stories Covered: 3, 4, 5, 6, 7, 8 & 9
+    + Mock Endpoint Screenshot. <br> ![mocked endpoint json](docs/images/feature-mock-data.png)
 
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
-  
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
+  + Use of `required` HTML attribute for client side validation on the site owner's mandatory items checklist. - Server side validation is beyond the scope of this project
+    + User Stories Covered: 4, 6, 7, 8 & 9
+    + Required attributes in code Screenshot. <br> ![required attibutes in mandatory inputs in code](docs/images/feature-required.png)
 
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
+  + Form control buttons to Download, Clear, Cancel and Submit the Order. - The Submit is forwarded to the CI formdump [service](https://formdump.codeinstitute.net/) to mock a POST downstream.
+    + User Stories Covered: 1 & 10
+    + Form Buttons Screenshot. <br> ![form buttons image](docs/images/feature-form-buttons.png)
 
-  + Feature Name
-    + User Stories Covered: 
-    + Feature state 1 Screenshot. <br> ![nav menu closed](docs/images/feature-item-state1.png)
-
-    + Feature state 2 Screenshot. <br> ![nav menu open](docs/images/feature-item-state2.png)
+  + Notes textbox that is submitted with the form details to provide a way to communicate custom notes downstream.
+    + User Stories Covered: 3 & 11    
+    + Notes Area Screenshot. <br> ![form textarea notes image](docs/images/feature-text-area.png)
 
 + 404.html
 
@@ -251,6 +246,7 @@ The website is comprised of a single page app, a mock response of an upstream ap
 
 + Upstream Database system and API to make the available configurations call more real time.
 + Downstream API integration to place the order request into a work queue
++ The backend form validation, as the form control is implemented only on client side technologies a tech savvy user could bypass these and post direct to the form endpoint without declaring values for all the inputs.
 
 ### Accessibility Features
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
