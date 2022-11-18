@@ -83,7 +83,7 @@ This project endevours to build a requisition form that fetches the available co
 #### Employee
 1. I would like to raise an order for a new VM
 2. I would like to find instructions on how to complete an order.
-3. When the standard form doesn't meet my requirments I would like to specify custom information in the request.
+3. When the standard form doesn't meet my requirements I would like to specify custom information in the request.
 
 ### Site Owner
 4. I would like users to always specify the hardware, environment, location, OS type of the VM and user's email in order to submit an order to the API.
@@ -194,7 +194,7 @@ The website is comprised of a single page app, a mock response of an upstream ap
       + Smaller Screen size modal Screenshot. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
       + Larger Screen size modal Screenshot. <br> ![larger screen modal view](docs/images/feature-order-form.png)
 
- + Instructions text box containing the following instructions: `Use the textarea to define any custom requirements, if the submit fails or you have any requirments not specified in the form please download the completed request and email the provisioning team.` informing the potential users how to to request a new virtual machine.
+ + Instructions text box containing the following instructions: `Use the textarea to define any custom requirements, if the submit fails or you have any requirements not specified in the form please download the completed request and email the provisioning team.` informing the potential users how to to request a new virtual machine.
     + User Stories Covered: 2
     + Instructions Screenshot. <br> ![text instructions](docs/images/feature-instructions.png)
 
@@ -250,7 +250,7 @@ site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fb
 
 ### JavaScript Validation
 
-The JSHint was used to validate the JavaScript of the website.
+The JSHint Plugin was used to validate the JavaScript of the website.
 
 ![JSHint summary image for JavaScript Code page](docs/images/testing-jshint.png)
 
@@ -305,7 +305,6 @@ The website was tested on the following browsers:
 2. Mozilla Firefox
 
 ### Testing user stories
-
 
 Submit an Order with checkbox and backup
 Download an Order no backup
@@ -414,7 +413,7 @@ Downloaded file <a href="docs/text/vmOrder.txt">sample</a>
 </details>
 <br>
 
-4. I would like users to always specify the hardware of the VM
+4. I would like users to always specify the hardware, environment, location, OS type of the VM and user's email in order to submit an order to the API.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -445,34 +444,6 @@ Downloaded file <a href="docs/text/vmOrder.txt">sample</a>
 
 5. I would like to request a backup of the system when needed
 
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-
-
-<br>
-<details>
-<summary>Feature 1</summary>
-<br>
-<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
-</details>
-<br>
-<details>
-<summary>Feature 2</summary>
-<br>
-<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
-</details>
-<br>
-<details>
-<summary>Feature 3</summary>
-<br>
-<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
-</details>
-<br>
-
-6. I would like users to always specify an environment to deploy the VM to
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -501,124 +472,7 @@ Downloaded file <a href="docs/text/vmOrder.txt">sample</a>
 </details>
 <br>
 
-7. I would like users to always specify a location to deploy the VM to
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-
-
-<br>
-<details>
-<summary>Feature 1</summary>
-<br>
-<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
-</details>
-<br>
-<details>
-<summary>Feature 2</summary>
-<br>
-<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
-</details>
-<br>
-<details>
-<summary>Feature 3</summary>
-<br>
-<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
-</details>
-<br>
-
-8. I would like users to always specify the OS type that is installed
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-
-
-<br>
-<details>
-<summary>Feature 1</summary>
-<br>
-<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
-</details>
-<br>
-<details>
-<summary>Feature 2</summary>
-<br>
-<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
-</details>
-<br>
-<details>
-<summary>Feature 3</summary>
-<br>
-<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
-</details>
-<br>
-
-9. I would like users to always specify an identifing email address for their order
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-
-
-<br>
-<details>
-<summary>Feature 1</summary>
-<br>
-<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
-</details>
-<br>
-<details>
-<summary>Feature 2</summary>
-<br>
-<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
-</details>
-<br>
-<details>
-<summary>Feature 3</summary>
-<br>
-<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
-</details>
-<br>
-
-10. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-| Feature name | steps to test | Expected results  | Works as expected |
-
-
-<br>
-<details>
-<summary>Feature 1</summary>
-<br>
-<img alt="Feature 1 Test Results" src="docs/images/testing-feature1.gif">
-</details>
-<br>
-<details>
-<summary>Feature 2</summary>
-<br>
-<img alt="Feature 2 Test Results" src="docs/images/testing-feature2.gif">
-</details>
-<br>
-<details>
-<summary>Feature 3</summary>
-<br>
-<img alt="Feature 3 Test Result" src="docs/images/testing-feature3.gif">
-</details>
-<br>
-
-
-11. I would like users to be able to communicate custom requirments in an order
+6. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
