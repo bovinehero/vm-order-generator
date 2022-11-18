@@ -63,8 +63,6 @@ This project endevours to build a requisition form that fetches the available co
 
 ## User Experience
 
-User experience Summary
-
 ### Key Information on the Site
 + On the landing site some basic instructions on how to use the form is present.
 + All the available configurations on the site load are availabel in the form. 
@@ -88,20 +86,17 @@ User experience Summary
 3. When the standard form doesn't meet my requirments I would like to specify custom information in the request.
 
 ### Site Owner
-4. I would like users to always specify the hardware of the VM
+4. I would like users to always specify the hardware, environment, location, OS type of the VM and user's email in order to submit an order to the API.
 5. I would like to request a backup of the system when needed
-6. I would like users to always specify an environment to deploy the VM to
-7. I would like users to always specify a location to deploy the VM to
-8. I would like users to always specify the OS type that is installed
-9. I would like users to always specify an identifing email address for their order
-10. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
-
-
+6. I would like the data posted to the endpoint to be downloadable incase the downstream endpoint fails 
+ 
 ## Design
 
 ### Design Considerations
 
-Design Considerations Summary
+Due to the JavaScript requirement this site really needed to be a single page app, and by virtue the requirement boiled down to a web form best practice dictates a simplistic approach.
+
+With this in mind I decided to implement a simple landing page with text instructions and a button to launch a web form.
 
 ### Colour
 
@@ -194,30 +189,29 @@ HTML, CSS and JavaScript were used to create this website.
 The website is comprised of a single page app, a mock response of an upstream api and a custom 404 page which which will return the user to the home page should they click on an expired link or otherwise get lost on the site.
 
 + index.html
-  
- + Instructions text box containing the following instructions: `Use the textarea to define any custom requirements, if the submit fails or you have any requirments not specified in the form please download the completed request and email the provisioning team.` informing the potential users how to to request a new virtual machine.
-    + User Stories Covered: 2
-    + Instructions Screenshot. <br> ![text instructions](docs/images/feature-instructions.png)
-
-  + A responsive order form that prompts users to fill out the required information for an order.
+  + A responsive order form launched by an event listener that prompts users to fill out the required information for an order.
     + User Stories Covered: 1
       + Smaller Screen size modal Screenshot. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
       + Larger Screen size modal Screenshot. <br> ![larger screen modal view](docs/images/feature-order-form.png)
 
+ + Instructions text box containing the following instructions: `Use the textarea to define any custom requirements, if the submit fails or you have any requirments not specified in the form please download the completed request and email the provisioning team.` informing the potential users how to to request a new virtual machine.
+    + User Stories Covered: 2
+    + Instructions Screenshot. <br> ![text instructions](docs/images/feature-instructions.png)
+
   + A mocked API call page that populates the form with the current available options when opened or cleared at an [endpoint](https://bovinehero.com/vm-order-generator//assets/mocks/sample.json) /assets/mocks/sample.json and a Checkbox option for Backups. - As this is a mocked call on the website the data is cached thus a full refresh of the endpoint page is required if it changes.
-    + User Stories Covered: 3, 4, 5, 6, 7, 8 & 9
+    + User Stories Covered: 4 & 5
     + Mock Endpoint Screenshot. <br> ![mocked endpoint json](docs/images/feature-mock-data.png)
 
   + Use of `required` HTML attribute for client side validation on the site owner's mandatory items checklist. - Server side validation is beyond the scope of this project
-    + User Stories Covered: 4, 6, 7, 8 & 9
+    + User Stories Covered: 4
     + Required attributes in code Screenshot. <br> ![required attibutes in mandatory inputs in code](docs/images/feature-required.png)
 
-  + Form control buttons to Download, Clear, Cancel and Submit the Order. - The Submit is forwarded to the CI formdump [service](https://formdump.codeinstitute.net/) to mock a POST downstream.
-    + User Stories Covered: 1 & 10
+  + Onclick form control buttons to Download, Clear, Cancel and Submit the Order. - The Submit is forwarded to the CI formdump [service](https://formdump.codeinstitute.net/) to mock a POST downstream.
+    + User Stories Covered: 1 
     + Form Buttons Screenshot. <br> ![form buttons image](docs/images/feature-form-buttons.png)
 
   + Notes textbox that is submitted with the form details to provide a way to communicate custom notes downstream.
-    + User Stories Covered: 3 & 11    
+    + User Stories Covered: 3 & 6    
     + Notes Area Screenshot. <br> ![form textarea notes image](docs/images/feature-text-area.png)
 
 + 404.html

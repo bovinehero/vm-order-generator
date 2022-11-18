@@ -3,11 +3,11 @@
 */
 console.log("JavaScript Connected!");
 // Get the modal
-let modal = document.getElementById("vmRequestModal");
+let modal = document.getElementById("vm-request-modal");
 // Get the button that opens the modal
-let btn = document.getElementById("vmRequest");
+let btn = document.getElementById("vm-request");
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("closeRequest")[0];
+let span = document.getElementsByClassName("close-request")[0];
 // Get the base url for where all the API mocks are hosted
 let baseUrl = document.URL;
 
