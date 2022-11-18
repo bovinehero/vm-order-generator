@@ -8,9 +8,10 @@
 
 TODO:
 
-1. Re-work the user stories into a smaller batch
-2. complete story testing
-2. Review content
+1. complete story testing
+2. Implement feedback 
+>I tested it on desktop @ 1280x1024. I thought the list fields were blank at first, but they were aligned right. Would it be worth adding a few media queries for higher resolutions? All features working as intended. From a UX standpoint, have you thought about styling {cursor: pointer;} for any clickable elements? Definitely works as intended so you've got the luxury of sending it now or adding any finishing touches!
+3. Review content
 
 
 ## Table of Content
@@ -544,8 +545,10 @@ No borrowed Media in this project
 ## Acknowledgments
 I would like to acknowledge the following people who helped me along the way in completing my second CI project:
 
-Ed Bradly - for his insights into flexbox, grid and why mobile first will save you from headaches
+Ed Bradly - for his insights into JavaScript events
+
+Joesph Smith - for his peer review on the site before submission
 
 Mo Shami - for being the mentor that set me on the right path and provided me with mid and final feedback prioir to submission.
 
-Offensive Security - for the defensive JavaScript advice in the JS for loops.
+Offensive Security - for the defensive JavaScript advice in my JS for loops.
