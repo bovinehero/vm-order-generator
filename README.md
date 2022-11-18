@@ -11,6 +11,8 @@ TODO:
 1. complete story testing
 2. Implement feedback 
 >I tested it on desktop @ 1280x1024. I thought the list fields were blank at first, but they were aligned right. Would it be worth adding a few media queries for higher resolutions? All features working as intended. From a UX standpoint, have you thought about styling {cursor: pointer;} for any clickable elements? Definitely works as intended so you've got the luxury of sending it now or adding any finishing touches!
+> Make the download functionality a quiz that uses the emailjs API
+> add try except functionality to the API calls
 3. Review content
 
 
