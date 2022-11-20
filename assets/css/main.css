@@ -180,7 +180,7 @@ select option:checked, select option:hover {
 }
 
   /* The Close Button in the Modal */
-.closeRequest {
+.close-request{
     color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
@@ -190,12 +190,12 @@ select option:checked, select option:hover {
     order: 2;
 }
   
-.closeRequest:hover, .closeRequest:focus {
+.close-request:hover, .close-request:focus {
     color: var(--main-color);
     text-decoration: none;
 }
 
-#vmRequest {
+#vm-request {
     color: var(--main-pair-color);
     float: right;
     padding-right: 1rem;
